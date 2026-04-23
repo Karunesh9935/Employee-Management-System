@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "concurrently \"vite\" \"node backend/server.js\"",
     "build": "vite build",
-    "postbuild": "cd backend && npm install",
+    "postbuild": "cd backend && npm install --build-from-source sqlite3 && npm install",
     "start": "node backend/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
